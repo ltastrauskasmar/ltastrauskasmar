@@ -1,3 +1,87 @@
-<h1>
-  {{title}}
-</h1>
+<div class="narrowToolbar">
+
+</div>
+
+<md-tab-group class="topToolbar">
+
+  <md-tab label="Home">
+
+
+  </md-tab>
+
+  <md-tab label="Paskolos skaičiuoklė">
+
+
+    <div class="page-padding" align="center">
+      <div>
+        <md-toolbar color="primary" layout-align="center center">
+          <span class="spanCentered">Vartojimo paskolos skaičiuoklė</span>
+        </md-toolbar>
+
+        <h2 style="color:sienna">Informacija apie jūsų pageidaujamą paskolą</h2>
+        <label style="color: gray">Pageidaujama paskolos suma</label>
+
+        <md-slider [(ngModel)]="loan" class="md-slider-horizontal" showTicks="true" max="20000" min="500" step="1"
+                   thumbLabel="true" value="500"></md-slider>
+        <input [(ngModel)]="loan" class="digits">
+        <span class="unit" style="color: gray">Eur</span>
+
+        <form action="#" id="ifAlone" align="center">
+          <label style="color:sienna">Paskolą imsiu</label>
+
+          <input type="radio" name="alone" checked> Vienas
+
+          <input type="radio" name="alone"> Su sutuoktiniu(bendraskoliu)
+
+
+        </form>
+
+
+      </div>
+
+      <div>
+        <h2 style="color:sienna">Informacija apie jūsų pajamas</h2>
+        <label style="color: gray">Jūsų grynosios mėnesio pajamos</label>
+        <md-slider [(ngModel)]="income" class="md-slider-horizontal" showTicks="true" max="20000" min="245" step="1"
+                   thumbLabel="true" value="245"></md-slider>
+
+        <input [(ngModel)]="income" class="digits" value="245" type="text" id="income">
+        <span class="unit" style="color: gray">Eur/mėn.</span>
+
+      </div>
+    </div>
+
+
+  </md-tab>
+  <md-tab label="Paraiškos pildymas">
+
+    <div class="page-padding" align="center">
+      <div>
+        <md-toolbar color="primary" layout-align="center center">
+          <span class="spanCentered">Paraiškos pildymas</span>
+        </md-toolbar>
+        <div>
+          <h1> Vartojimo paskolos skaičiuoklė </h1>
+        </div>
+
+        <form action="#" id=LoanForm align="center">
+          <label class="inputFormStyle">Paskolos suma *</label>
+          <input class="digits" type="text" required>
+          <span class=inputFormStyle>Eur</span>
+          <br>
+          <label class="inputFormStyle">Paskolos terminas *</label>
+          <input class="digits" type="search" required>
+          <span class=inputFormStyle>Eur</span>
+
+
+        </form>
+
+
+      </div>
+
+
+    </div>
+
+
+  </md-tab>
+</md-tab-group>
