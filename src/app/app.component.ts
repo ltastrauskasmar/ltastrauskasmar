@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormService} from "./form.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  categories: any;
+  error: any;
+  users: any;
+
+  constructor (private formService: FormService){
+  }
+  addUser(
+    firstName:string,
+  lastName:string,
+    
+
+  )
 }
